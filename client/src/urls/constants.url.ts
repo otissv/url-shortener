@@ -1,0 +1,10 @@
+export const DELETE_URL_ITEM = "DELETE_URL_ITEM"
+export const SET_URL_ITEM = "SET_URL_ITEM"
+export const SET_URL_ITEMS = "SET_URL_ITEMS"
+export const UPDATE_URL = "UPDATE_URL"
+
+export const API_FETCH_URLS = "FETCH_URLS"
+export const API_FETCH_URL_ITEM = "FETCH_URL_ITEM"
+export const API_UPDATE_URL_ITEM = "API_UPDATE_URL_ITEM"
+export const API_DELETE_URL_ITEM = "API_DELETE_URL_ITEM"
+export const API_ADD_URL_ITEM = "API_ADD_URL_ITEM"

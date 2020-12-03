@@ -1,0 +1,188 @@
+:root {
+  --font-family: "system-ui", "-apple-system", "Segoe UI", "Roboto", "Noto Sans",
+    "Ubuntu", "Cantarell", "Helvetica Neue", "sans-serif";
+
+  --grey-050: #f7f7f7;
+  --grey-100: #e1e1e1;
+  --grey-200: #cfcfcf;
+  --grey-300: #b1b1b1;
+  --grey-400: #757575;
+  --grey-500: #626262;
+  --grey-600: #515151;
+  --grey-700: #4f4f4f;
+  --grey-800: #3b3b3b;
+  --grey-900: #222222;
+
+  --action-050: #e3f9e5;
+  --action-100: #c1eac5;
+  --action-200: #a3d9a5;
+  --action-300: #7bc47f;
+  --action-400: #57ae5b;
+  --action-500: #3f9142;
+  --action-600: #2f8132;
+  --action-700: #207227;
+  --action-800: #0e5814;
+  --action-900: #05400a;
+
+  --error-050: #ffeeee;
+  --error-100: #facdcd;
+  --error-200: #f29b9b;
+  --error-300: #e66a6a;
+  --error-400: #d64545;
+  --error-500: #ba2525;
+  --error-600: #a61b1b;
+  --error-700: #911111;
+  --error-800: #780a0a;
+  --error-900: #610404;
+
+  --background: (var(--grey-050));
+  --text-color: (var(--grey-800));
+
+  --border-color: (var(--grey-700));
+  --border-thin: 1px solid (var(--border-color));
+
+  --link-text-color: #4ea1f3;
+  --link-text-hover-color: #4ea1f3;
+  --link-text-active-color: #4ea1f3;
+  --link-text-focus-color: #4ea1f3;
+  --link-text-visited-color: #4ea1f3;
+
+  --outline: transparent solid 2px;
+  --outline-border: 2px solid #006dea;
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 24px;
+  --spacing-6: 32px;
+  --spacing-7: 48px;
+  --spacing-8: 64px;
+  --spacing-9: 96px;
+  --spacing-default: 24px;
+
+  --font-base: 16px;
+  --font-size-0: 0rem;
+  --font-size-1: 0.512.rem;
+  --font-size-2: 0.64rem;
+  --font-size-3: 0.8rem;
+  --font-size-4: 1rem;
+  --font-size-5: 1.25rem;
+  --font-size-6: 1.563rem;
+  --font-size-7: 1.953rem;
+  --font-size-8: 2.441rem;
+  --font-size-9: 3.052rem;
+  --font-size-10: 3.815rem;
+  --font-size-11: 4.768rem;
+  --font-size-12: 5.96rem;
+  --font-size-13: 7.451rem;
+  --font-size-14: 7.451rem;
+  --font-size-15: 9.313rem;
+  --font-size-16: 11.642rem;
+  --font-size-default: `1rem`;
+
+  --lineHeight-0: 0;
+  --lineHeight-1: 1;
+  --lineHeight-2: 1.5;
+  --lineHeight-3: 1.75;
+  --lineHeight-4: 2;
+  --lineHeight-default: 1.5;
+
+  --ease-slow: 0.5s ease;
+  --ease-medium: 0.3s ease;
+  --ease-fast: 0.1s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before {
+  box-sizing: border-box;
+}
+
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-default);
+  line-height: var(--font-lineHeight-default);
+  background-color: var(--background);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  font-kerning: normal;
+  --moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  --msfont-feature-settings: "kern", "liga", "clig", "calt";
+  --webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+a {
+  touch-action: manipulation;
+  background-color: transparent;
+  --webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: var(--link-text-color);
+  outline: var(--outline);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--link-text-hover-color);
+}
+
+a:focus {
+  color: var(--link-text-focus-color);
+  border: var(--outline-border);
+}
+
+a:active {
+  color: var(--link-text-active-color);
+  border: var(--outline-border);
+}
+
+table {
+  padding: 0;
+  font-size: var(--font-size-default);
+  line-height: var(--font-line-height-2);
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+
+th,
+td {
+  border-bottom: 1px solid #00000012;
+  font-feature-settings: tnum;
+  -moz-font-feature-settings: tnum;
+  -ms-font-feature-settings: tnum;
+  -webkit-font-feature-settings: tnum;
+  padding-left: var(--spacing-3);
+  padding-right: var(--spacing-3);
+  padding-top: var(--spacing-3);
+  padding-bottom: var(--spacing-3);
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 0;
+}
+
+th:last-child,
+td:last-child {
+  padding-right: 0;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+p {
+  margin: 0;
+}

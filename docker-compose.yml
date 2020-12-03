@@ -1,0 +1,45 @@
+version: "3"
+services:
+  mongo:
+    container_name: mongo-docker
+    restart: always
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - ./data/db:/data/db
+
+  api:
+    container_name: api-docker
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./api
+    volumes:
+      - /app/node_modules
+      - ./api:/app
+    environment:
+      - NODE_ENV=development
+
+  client:
+    container_name: client-docker
+    restart: always
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./client
+    volumes:
+      - /app/node_modules
+      - ./client:/app
+
+  nginx:
+    container_name: nginx-docker
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      - "3000:80"

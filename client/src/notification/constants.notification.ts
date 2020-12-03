@@ -1,0 +1,8 @@
+export const SET_NOTIFICATION_MESSAGE = "SET_NOTIFICATION_MESSAGE"
+
+export const BAD_REQUEST = "BAD_REQUEST"
+export const DATA_NOT_SAVED = "DATA_NOT_SAVED"
+export const DOCUMENTS_EXISTS = "DOCUMENTS_EXISTS"
+export const SERVER_ERROR = "SERVER_ERROR"
+export const SUCCESS = "SUCCESS"
+export const ERROR = "ERROR"
